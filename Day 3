@@ -1,1 +1,34 @@
-Q5. 
+Q5. Write a program to convert temperature from Celsius to Fahrenheit
+
+#include <stdio.h>
+
+int main()
+{
+    int cel;
+    int fran;
+    printf("Enter the temprature in celsius: ");
+scanf("%d", &cel);
+fran = (cel*9/5)+32;
+printf("The temprature in faranheit is %d", fran);
+    return 0;
+}
+
+Q6. Write a program to swap two numbers using a third variable.
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, temp;
+    printf("Enter first number: ");
+    scanf("%d", &a);
+    printf("Enter second number: ");
+    scanf("%d", &b);
+    printf("Before swapping: %d, %d\n", a, b);
+    temp=a;
+    a=b;
+    b=temp;
+    printf("After swapping: %d, %d\n", a, b);
+
+    return 0;
+}
