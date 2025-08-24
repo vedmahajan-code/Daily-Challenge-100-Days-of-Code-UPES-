@@ -1,0 +1,31 @@
+Q3. 
+#include <stdio.h>
+
+int main()
+{
+    int len;
+    int wid;
+    int peri;
+  int area;
+    printf("Give me the length of the rectangle: ");
+    scanf("%d", &len);
+    printf("Give me the width of the rectangle: ");
+scanf("%d", &wid);
+peri = 2*(wid+len);
+area = wid*len;
+printf("The area is %d\nThe perimeter is %d", peri, area);
+    return 0;
+}
+
+Q4. 
+#include <stdio.h>
+
+int main()
+{
+    float rad;
+    printf("Enter the radius of circle: ");
+    scanf("%f", &rad);
+    printf("The perimeter is %f and area is %f", 2*3.14*rad, 3.14*rad*rad);
+
+    return 0;
+}
