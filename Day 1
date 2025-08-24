@@ -1,0 +1,32 @@
+Q1. 
+#include<stdio.h>
+int main()
+{
+	int num1;
+	int num2;
+	int sum;
+	printf("Enter a number: ");
+	scanf("%d",&num1);
+	printf("Tell me another number: ");
+	scanf("%d", &num2);
+	sum = num1 + num2;
+	printf("the addition is %d ", sum);
+	return 0;
+}
+
+Q2. 
+#include<stdio.h>
+int main()
+{
+	int num1;
+	int num2;
+	printf("Enter a number: ");
+	scanf("%d",&num1);
+	printf("Tell me another number: ");
+	scanf("%d", &num2);
+	printf("the addition is %d \n", num1+num2);
+	printf("the difference is %d \n", num1-num2);
+	printf("the product is %d \n", num1*num2);
+    printf("the division is taking num1 as numerator is %f", (double)num1 / num2);
+	return 0;
+}
