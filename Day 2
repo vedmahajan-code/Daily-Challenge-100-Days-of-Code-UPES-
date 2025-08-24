@@ -1,4 +1,6 @@
-Q3. 
+Q3. Write a program to calculate the area and perimeter of a rectangle given its length and breadth.
+#include <stdio.h>
+
 #include <stdio.h>
 
 int main()
@@ -13,11 +15,11 @@ int main()
 scanf("%d", &wid);
 peri = 2*(wid+len);
 area = wid*len;
-printf("The area is %d\nThe perimeter is %d", peri, area);
+printf("The area is %d\nThe perimeter is %d", area, peri);
     return 0;
 }
 
-Q4. 
+Q4. Write a program to calculate the area and circumference of a circle given its radius.
 #include <stdio.h>
 
 int main()
