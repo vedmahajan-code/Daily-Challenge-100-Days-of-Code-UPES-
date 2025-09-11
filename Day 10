@@ -1,0 +1,70 @@
+Q.19 Write a program to classify a triangle as Equilateral, Isosceles, or Scalene based on its side lengths.
+
+#include <stdio.h>
+
+int main()
+{
+int a;
+int b;
+int c;
+printf("enter one side of triangle: ");
+scanf("%d", &a);
+printf("Enter side 2nd of triangle: ");
+scanf("%d", &b);
+printf("Enter the third of triangle: ");
+scanf("%d", &c);
+
+if(a+b>c && b+c>a && a+c>b)
+{
+  printf("triangle is valid\n");
+
+ 
+if (a==b && b==c)
+{
+    printf("The triangle is equilateral\n");
+}
+else if (a==b||a==c||b==c)
+{
+    printf("Triangle is isosceles\n");
+}
+else 
+ {
+  printf("Triangle is scalene\n");
+}
+if (a*a+b*b==c*c||b*b+c*c==a*a||a*a+c*c==b*b)
+{
+    printf("The triangle is right angled triangle\n");
+}
+else 
+{
+printf("Triangle is not right angled\n");
+}
+}
+else 
+{
+    printf("Triangle is invalid");
+}
+
+    return 0;
+}
+
+
+Q.20 Write a program to display the day of the week based on a number (1–7) using switch-case.
+
+#include <stdio.h>
+int main() {
+    int day;
+    printf("Enter a number (1-7): ");
+    scanf("%d", &day);
+    switch(day) {
+        case 1: printf("Monday"); break;
+        case 2: printf("Tuesday"); break;
+        case 3: printf("Wednesday"); break;
+        case 4: printf("Thursday"); break;
+        case 5: printf("Friday"); break;
+        case 6: printf("Saturday"); break;
+        case 7: printf("Sunday"); break;
+        default: printf("Invalid input");
+    }
+    return 0;
+}
