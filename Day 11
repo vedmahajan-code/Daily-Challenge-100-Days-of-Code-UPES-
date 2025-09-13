@@ -1,0 +1,66 @@
+Q.21 Write a program to display the month name and number of days using switch-case for a given month number.
+
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    int month;
+    printf("Enter a number of which you would like to know the month of: ");
+    scanf("%d",&month);
+    switch(month)
+    {
+        case 1: printf("January, 31 days"); break;
+        case 2: printf("February, 28days"); break;
+        case 3: printf("March, 31 days"); break;
+        case 4: printf("April, 30 days"); break;
+        case 5: printf("May, 31 days"); break;
+        case 6: printf("June, 30 days"); break;
+        case 7: printf("July, 31 days"); break;
+        case 8: printf("August, 31 days"); break;
+        case 9: printf("September, 30 days"); break;
+        case 10: printf("October, 31 days"); break;
+        case 11: printf("November, 30 days"); break;
+        case 12: printf("December, 31 days"); break;
+        default: printf("Only 12 months in a year");
+    }
+
+    return 0;
+}
+
+Q.22 Write a program to find profit or loss percentage given cost price and selling price.
+
+#include <stdio.h>
+
+int main()
+{
+    float cp, sp, profit, loss, lose, prof;
+    printf("Enter your cost price: ");
+    scanf("%f",&cp);
+    printf("Enter your selling price: ");
+    scanf("%f", &sp);
+    if(sp-cp>0)
+    {
+        prof=sp-cp;
+        profit=((sp-cp)/cp)*100;
+        printf("your profit is %f by %fpercent", prof, profit);
+    }
+    else if(sp-cp<0)
+    {
+        lose=cp-sp;
+        loss=((cp-sp)/cp)*100;
+        printf("your loss is %f by %fpercent", lose, loss);
+    }
+    else
+    {
+        printf("No profit no loss");
+    }
+    return 0;
+}
