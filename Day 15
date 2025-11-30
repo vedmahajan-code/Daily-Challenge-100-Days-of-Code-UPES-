@@ -1,1 +1,27 @@
+//Q29: Write a program to calculate the factorial of a number.
+#include<stdio.h>
+void main(){
+  int n,fac=1;
+  printf("enter the number, whose factorial you want\n");
+  scanf("%d",&n);
+  for(int i=1;i<=n;i++){
+    fac*=i;
+  }
+  printf("%d",fac);
+}
 
+//Q30: Write a program to reverse a given number.
+#include<stdio.h>
+void main(){
+  int n,reverse=0,i=1;
+  char choice;
+  do{
+  printf("enter digits of number you want\n");
+  scanf("%d",&n);
+  reverse+=i*n;
+  i*=10;
+  printf("Do you want to enter another number? (y/n): ");
+  scanf(" %c", &choice);  
+  }while(choice =='y'|| choice =='Y');
+  printf("%d\n",reverse);
+}
