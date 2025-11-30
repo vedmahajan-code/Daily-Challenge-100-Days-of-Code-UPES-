@@ -1,1 +1,65 @@
+//Q93: Check if two strings are anagrams of each other.
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int are_anagrams(const char *str1, const char *str2) {
+    int freq[256] = {0}; 
+    if (strlen(str1) != strlen(str2))
+        return 0;
+    for (int i = 0; str1[i] != '\0'; i++) {
+        freq[(unsigned char)str1[i]]++;
+        freq[(unsigned char)str2[i]]--;
+    }
+    for (int i = 0; i < 256; i++) {
+        if (freq[i] != 0)
+            return 0;
+    }
+    return 1;
+}
+int main() {
+    char str1[100], str2[100];
+    printf("Enter first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    printf("Enter second string: ");
+    fgets(str2, sizeof(str2), stdin);
+    str1[strcspn(str1, "\n")] = '\0';
+    str2[strcspn(str2, "\n")] = '\0';
 
+    if (are_anagrams(str1, str2))
+        printf("anagrams.\n");
+    else
+        printf("not anagrams.\n");
+
+    return 0;
+}
+
+//Q94: Find the longest word in a sentence.
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+void find_longest_word(const char *str) {
+    int max_len = 0, curr_len = 0;
+    int start = 0, max_start = 0;
+    for (int i = 0; ; i++) {
+        if (isalpha(str[i])) {
+            if (curr_len == 0) start = i;
+            curr_len++;
+        } else {
+            if (curr_len > max_len) {
+                max_len = curr_len;
+                max_start = start;
+            }
+            curr_len = 0;
+            if (str[i] == '\0') break;
+        }
+    }
+    for (int i = max_start; i < max_start + max_len; i++)
+        putchar(str[i]);
+}
+int main(){
+    char sentence[200];
+    printf("Enter a sentence: ");
+    fgets(sentence, sizeof(sentence), stdin);
+    find_longest_word(sentence);
+    return 0;
+}
